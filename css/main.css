@@ -1,0 +1,235 @@
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, address, big, em, img, s, small, strike, strong, var, b, u, i, center, dl, dt, dd, ol, ul, li, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font-family: 'Montserrat', sans-serif;
+  vertical-align: baseline;
+  list-style-type: none;
+  text-decoration: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  --main-text: black;
+  --main-dark-color: #202a42;
+}
+
+#landing-page {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+}
+
+.img1,
+.img2,
+.img3,
+.img4,
+.img5 {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: -1;
+}
+
+#nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 0.02rem solid rgba(245, 245, 245, 0.7);
+  position: relative;
+  z-index: 2;
+}
+
+#nav #logo {
+  font-size: 1.7rem;
+}
+
+#nav #logo a {
+  color: white;
+}
+
+#nav .nav-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#nav .nav-items .nav-link {
+  padding: 1rem;
+  color: rgba(245, 245, 245, 0.7);
+}
+
+#nav .nav-items .nav-link:hover {
+  color: white;
+}
+
+.slide {
+  background-position: left;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  opacity: 0;
+  -webkit-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
+  z-index: -10;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+.arrow {
+  background-color: transparent;
+  border: 0.07rem solid rgba(245, 245, 245, 0.7);
+  color: #fff;
+  cursor: pointer;
+  font-size: 30px;
+  padding: 20px;
+  position: fixed;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+
+.arrow:focus {
+  outline: 0;
+}
+
+.arrow:hover {
+  background-color: var(--main-dark-color);
+}
+
+.left-arrow {
+  left: calc(15vw - 65px);
+}
+
+.right-arrow {
+  right: calc(15vw - 65px);
+}
+
+#brand {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+#brand p {
+  color: var(--main-dark-color);
+  font-size: 3.5rem;
+  text-align: center;
+  width: 60rem;
+  text-transform: uppercase;
+  line-height: 5rem;
+}
+
+#brand .line-1::before {
+  content: attr(data-text);
+  position: absolute;
+  top: .2rem;
+  left: .2rem;
+  height: 100%;
+  width: 100%;
+  color: white;
+}
+
+#brand .line-2::before {
+  content: attr(data-text2);
+  position: absolute;
+  top: 5.2rem;
+  left: .2rem;
+  height: 100%;
+  width: 100%;
+  color: white;
+}
+
+#brand .button-hover {
+  position: absolute;
+  -webkit-transform: translate(25rem, 1.8rem);
+          transform: translate(25rem, 1.8rem);
+  padding: 0.5rem;
+  border: .05rem solid white;
+  color: white;
+  font-size: 1.5rem;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+#brand .button-hover::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  content: '';
+  background: var(--main-dark-color);
+  -webkit-transition: -webkit-transform .5s;
+  transition: -webkit-transform .5s;
+  transition: transform .5s;
+  transition: transform .5s, -webkit-transform .5s;
+  left: 0;
+  -webkit-transform-origin: left top;
+          transform-origin: left top;
+}
+
+#brand .button-hover::after {
+  right: 0;
+  -webkit-transform-origin: right top;
+          transform-origin: right top;
+}
+
+#brand .button-hover::before, #brand .button-hover::after {
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  content: '';
+  width: 50%;
+  height: 100%;
+  background: var(--main-dark-color);
+  -webkit-transform: scale(0, 1);
+          transform: scale(0, 1);
+  -webkit-transition: -webkit-transform .3s;
+  transition: -webkit-transform .3s;
+  transition: transform .3s;
+  transition: transform .3s, -webkit-transform .3s;
+}
+
+#brand .button-hover:hover::before, #brand .button-hover:hover::after {
+  -webkit-transform: scale(1, 1);
+          transform: scale(1, 1);
+}
+
+#brand .button-hover:hover {
+  color: #fff;
+}
+
+@-webkit-keyframes shine {
+  100% {
+    left: 50%;
+  }
+}
+
+@keyframes shine {
+  100% {
+    left: 50%;
+  }
+}
+/*# sourceMappingURL=main.css.map */
