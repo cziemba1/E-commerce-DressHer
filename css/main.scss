@@ -42,11 +42,11 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, address, big, em, img, s, s
     position: relative;
     z-index: 2;
 
-    #logo{
-        font-size: 1.7rem;
-        a{
-            color: white;
-        }
+    #logo a img{
+        width: 7rem;
+        margin: -1.9rem;
+        opacity: .8;
+       
     }
 
     .nav-items{
@@ -64,7 +64,7 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, address, big, em, img, s, s
 }
 
 .slide {
-	background-position: left;
+	background-position: 50% 25%;
 	background-size: cover;
 	position: absolute;
 	top: 0;
@@ -117,32 +117,15 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, address, big, em, img, s, s
     transform: translate(-50%, -50%);
 
     p{
-        color: var(--main-dark-color);
+        color: white;
         font-size: 3.5rem;
+        filter: drop-shadow(.05em .05em rgba(32, 42, 66, 0.6));
         text-align: center;
         width: 60rem;
         text-transform: uppercase;
         line-height: 5rem;
     }
-    .line-1::before{
-        content: attr(data-text);
-        position: absolute;
-        top: .2rem;
-        left: .2rem;
-        height: 100%;
-        width: 100%;
-        color: white;
-    }
-    .line-2::before{
-        content: attr(data-text2);
-        position: absolute;
-        top: 5.2rem;
-        left: .2rem;
-        height: 100%;
-        width: 100%;
-        color: white;
-    }
-
+    
     .button-hover{
     position: absolute;
     transform: translate(25rem, 1.8rem);
